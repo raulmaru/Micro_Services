@@ -5,13 +5,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ServicesApi {
+    int retorno = 0;
     @GetMapping(value ="/soma")
     public int GetSoma (){
-        return 1+1;
+
+        return ++retorno;
     }
     @GetMapping(value = "/sub")
     public int GetSub (){
-        return 1-1;
+        return --retorno;
     }
 
 
